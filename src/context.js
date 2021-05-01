@@ -5,12 +5,20 @@ const AppContext = createContext()
 
 const AppProvider = ({ children }) => {
 
+    const [loading, setLoading] = useState(false)
     const [searchTerm, setSearchTerm] = useState('')
     const [books, setBooks] = useState([])
+ 
+
 
     const url = 'https://www.googleapis.com/books/v1/volumes?q='
 
+    const clearBooks = () =>{
+        setBooks([])
+    }
+
     const fetchBooks = () => {
+        setLoading(true)
         try {
             axios.get(`${url}${searchTerm}&maxResults=40`)
                 .then(response => {
@@ -21,22 +29,30 @@ const AppProvider = ({ children }) => {
                         return {
                             'title': volumeInfo.title,
                             'image': typeof volumeInfo.imageLinks !== 'undefined' ? volumeInfo.imageLinks.thumbnail : '../no-image-available.png',
+                            'id': book.id
                         }
                     })
                     setBooks(newBooks)
+                    setLoading(false)
                 })
         } catch (error) {
             console.log(error)
+            setLoading(false)
         }
     }
 
+
+   
     return (
 
         <AppContext.Provider
             value={{
                 books,
                 setSearchTerm,
-                fetchBooks
+                fetchBooks,
+                clearBooks, 
+                loading,
+    
             }}
         >
             {children}
