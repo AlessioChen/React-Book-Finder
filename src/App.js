@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './components/Header'
 import Home from './pages/Home'
 import BookInfo from './pages/BookInfo'
@@ -11,18 +11,17 @@ function App() {
     <Router>
       <Header />
 
-      <Switch>
 
-        <Route exact path='/'>
+      <Switch>
+        <Route exact path="/">
           <Home />
         </Route>
 
-        <Route path='/book/:id'>
+        <Route path="/book/:id">
           <BookInfo />
         </Route>
 
-
-        <Route path='/error'>
+        <Route path="/error">
           <Error />
         </Route>
 
