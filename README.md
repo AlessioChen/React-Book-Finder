@@ -2,7 +2,7 @@
 
 This project made  uses [Google books Api](https://developers.google.com/books/docs/overview) to find books. 
 
-Is's possibile to try a live demo at (netfly)[https://book-finer.netlify.app/]
+Is's possibile to try a live demo at [netfly] (https://book-finer.netlify.app)
 
 ## Made with
 
