@@ -1,8 +1,8 @@
 ## React book finder application
 
-This project made for star2Imapct uses [Google books Api](https://developers.google.com/books/docs/overview) to find books. 
+This project made  uses [Google books Api](https://developers.google.com/books/docs/overview) to find books. 
 
-Is's possibile to try a live demo at 
+Is's possibile to try a live demo at (netfly)[https://app.netlify.com/sites/book-finer/settings/deploys]
 
 ## Made with
 
