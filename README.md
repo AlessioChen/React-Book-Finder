@@ -1,8 +1,8 @@
 ## React book finder application
 
-This project made  uses [Google books Api](https://developers.google.com/books/docs/overview) to find books. 
+This project uses [Google books Api](https://developers.google.com/books/docs/overview) to find books. 
 
-Is's possibile to try a live demo at [netfly](https://book-finer.netlify.app/).
+Is's possible to try a live demo at [netfly](https://book-finer.netlify.app/).
 
 ## Made with
 
@@ -13,7 +13,7 @@ Is's possibile to try a live demo at [netfly](https://book-finer.netlify.app/).
 
 
 ## Run the project 
-After downloaded the source code run following commans in the project folder 
+After downloading the source code run the following commands in the project folder 
 
 ```
         npm install  
